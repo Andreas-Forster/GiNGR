@@ -6,7 +6,7 @@ name := "GiNGR"
 
 version := "0.1"
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.8"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -22,6 +22,11 @@ libraryDependencies ++= Seq(
   "io.github.cibotech" %% "evilplot" % "0.8.+",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.+"
 )
+
+libraryDependencies ++= (scalaBinaryVersion.value match {
+  case "2.13" => Seq("org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0")
+  case _      => Seq()
+})
 
 assemblyMergeStrategy in assembly := {
   case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
