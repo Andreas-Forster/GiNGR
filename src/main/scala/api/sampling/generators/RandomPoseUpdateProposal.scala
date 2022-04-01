@@ -18,6 +18,7 @@
 package api.sampling.generators
 
 import api.{EulerRotation, GingrRegistrationState}
+import breeze.stats.distributions.Rand.FixedSeed.randBasis
 import scalismo.sampling.{ProposalGenerator, TransitionProbability}
 
 sealed trait RotationAxis
