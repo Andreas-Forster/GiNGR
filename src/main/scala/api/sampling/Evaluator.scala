@@ -38,7 +38,7 @@ case class AcceptAll[State <: GingrRegistrationState[State]]() extends Evaluator
   }
 }
 
-case class IndependtPoints[State <: GingrRegistrationState[State]](
+case class IndependentPoints[State <: GingrRegistrationState[State]](
   state: State,
   uncertainty: Double,
   mode: EvaluationMode = ModelToTargetEvaluation,

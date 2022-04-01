@@ -17,7 +17,6 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "ch.unibas.cs.gravis" % "scalismo-native-all" % "4.0.+",
   "ch.unibas.cs.gravis" %% "scalismo-ui" % "0.91-RC3",
   "io.github.cibotech" %% "evilplot" % "0.8.+",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.+"
